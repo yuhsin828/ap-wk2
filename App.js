@@ -9,7 +9,7 @@ const App = () => {
       <Text>{albumData[0].title}</Text>
       <Text>{albumData[0].artist}</Text>
       <Text>{albumData[1].title}</Text>
-      <Text>{albumData[1].artist}</Text>
+      <Text>{albumData[1].artist}</Text> 
       <Text>{albumData[2].title}</Text>
       <Text>{albumData[2].artist}</Text>
     </SafeAreaView>
