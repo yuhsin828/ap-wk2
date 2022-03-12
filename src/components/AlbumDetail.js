@@ -12,8 +12,8 @@ const AlbumDetail = () => {
          }}
          />
          <View style={styles.headerContentStyle}>
-         <Text>Taylor Swift</Text>
-         <Text>Taylor Swift</Text>
+         <Text>IU</Text>
+         <Text>IU</Text>
          </View>
       </View>
       <View style={styles.cardSectionStyle}>
