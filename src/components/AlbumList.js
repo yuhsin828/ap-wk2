@@ -1,32 +1,29 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
+import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
+import AlbumDetail from "./AlbumDetail";
 import albumData from "../json/albums";
 
-const Albumlist = () => {
+const AlbumList = () => {
   return (
     <ScrollView>
-      {/* <View style={styles.iuIntro}>
+      <View style={styles.iuIntro}>
         <Image
           style={styles.thumbnailStyle}
           source={{
-            uri: albumData[0].thumbnail_image
+            uri: "https://i.kfs.io/artist/global/234878,0v11/fit/300x300.jpg"
           }}
         />
         <Text>IU</Text>
-      </View> */}
-      <View style={styles.cardContainerStyle}>
-        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-          <Image
-            style={styles.thumbnailStyle}
-            source={{
-              uri: albumData[0].thumbnail_image
-            }}
-          />
-          <View style={styles.headerContentStyle}>
-            <Text>{albumData[0].title}</Text>
-            <Text>{albumData[0].artist}</Text>
-          </View>
-        </View>
+      </View>
+
+      <AlbumDetail album={albumData[0]} />
+      <AlbumDetail album={albumData[1]} />
+      <AlbumDetail album={albumData[2]} />
+      <AlbumDetail album={albumData[3]} />
+      <AlbumDetail album={albumData[4]} />
+
+      {/* <View style={styles.cardContainerStyle}>
         <View style={styles.cardSectionStyle}>
           <Image
             style={styles.imageStyle}
@@ -35,20 +32,15 @@ const Albumlist = () => {
             }}
           />
         </View>
-      </View>
-      <View style={styles.cardContainerStyle}>
-        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-          <Image
-            style={styles.thumbnailStyle}
-            source={{
-              uri: albumData[1].thumbnail_image
-            }}
-          />
+        <View style={styles.cardSectionStyle}>
           <View style={styles.headerContentStyle}>
-            <Text>{albumData[1].title}</Text>
-            <Text>{albumData[1].artist}</Text>
+            <Text>{albumData[0].title}</Text>
+            <Text>{albumData[0].release}</Text>
           </View>
         </View>
+      </View>
+
+      <View style={styles.cardContainerStyle}>
         <View style={styles.cardSectionStyle}>
           <Image
             style={styles.imageStyle}
@@ -57,20 +49,15 @@ const Albumlist = () => {
             }}
           />
         </View>
-      </View>
-      <View style={styles.cardContainerStyle}>
-        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-          <Image
-            style={styles.thumbnailStyle}
-            source={{
-              uri: albumData[2].thumbnail_image
-            }}
-          />
+        <View style={styles.cardSectionStyle}>
           <View style={styles.headerContentStyle}>
-            <Text>{albumData[2].title}</Text>
-            <Text>{albumData[2].artist}</Text>
+            <Text>{albumData[1].title}</Text>
+            <Text>{albumData[1].release}</Text>
           </View>
         </View>
+      </View>
+
+      <View style={styles.cardContainerStyle}>
         <View style={styles.cardSectionStyle}>
           <Image
             style={styles.imageStyle}
@@ -79,20 +66,15 @@ const Albumlist = () => {
             }}
           />
         </View>
-      </View>
-      <View style={styles.cardContainerStyle}>
-        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-          <Image
-            style={styles.thumbnailStyle}
-            source={{
-              uri: albumData[3].thumbnail_image
-            }}
-          />
+        <View style={styles.cardSectionStyle}>
           <View style={styles.headerContentStyle}>
-            <Text>{albumData[3].title}</Text>
-            <Text>{albumData[3].artist}</Text>
+            <Text>{albumData[2].title}</Text>
+            <Text>{albumData[2].release}</Text>
           </View>
         </View>
+      </View>
+
+      <View style={styles.cardContainerStyle}>
         <View style={styles.cardSectionStyle}>
           <Image
             style={styles.imageStyle}
@@ -101,20 +83,15 @@ const Albumlist = () => {
             }}
           />
         </View>
-      </View>
-      <View style={styles.cardContainerStyle}>
-        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-          <Image
-            style={styles.thumbnailStyle}
-            source={{
-              uri: albumData[4].thumbnail_image
-            }}
-          />
+        <View style={styles.cardSectionStyle}>
           <View style={styles.headerContentStyle}>
-            <Text>{albumData[4].title}</Text>
-            <Text>{albumData[4].artist}</Text>
+            <Text>{albumData[3].title}</Text>
+            <Text>{albumData[3].release}</Text>
           </View>
         </View>
+      </View>
+
+      <View style={styles.cardContainerStyle}>
         <View style={styles.cardSectionStyle}>
           <Image
             style={styles.imageStyle}
@@ -123,54 +100,57 @@ const Albumlist = () => {
             }}
           />
         </View>
-      </View>
+        <View style={styles.cardSectionStyle}>
+          <View style={styles.headerContentStyle}>
+            <Text>{albumData[4].title}</Text>
+            <Text>{albumData[4].release}</Text>
+          </View>
+        </View>
+      </View> */}
+
     </ScrollView>
   );
 };
 
-const styles = StyleSheet.create({
-  iuIntro: {
+// const styles = StyleSheet.create({
+//   iuIntro: {
+//     flexDirection: "row",
+//     padding: 30,
+//     backgroundColor: "#D9C1CA"
+//   },
+//   thumbnailStyle: {
+//     height: 120,
+//     width: 120,
+//     borderRadius: 60
+//   },
 
-  },
-  thumbnailContainerStyle: {
-    flexDirection: "row",
-    justifyContent: "flex-start"
-  },
-  thumbnailStyle: {
-    height: 50,
-    width: 50,
-    margin: 5,
-    // borderRadius: 25
-  },
-  headerContentStyle: {
-    flexDirection: "column",
-    justifyContent: "space-around",
-    paddingLeft: 10
-  },
-  cardContainerStyle: {
-    // borderWidth: 1,
-    // borderRadius: 2,
-    // borderColor: "#D9C1CA",
-    shadowColor: "#D9C1CA",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 1,
-    marginLeft: 5,
-    marginRight: 5,
-    marginBottom: 20
-  },
-  cardSectionStyle: {
-    padding: 5,
-    backgroundColor: "#fff",
-    borderColor: "#D9C1CA",
-    borderBottomWidth: 1
-  },
-  imageStyle: {
-    borderRadius: 10,
-    height: 300,
-    width: null
-  }
-});
+//   // thumbnailContainerStyle: {
+//   //   flexDirection: "row",
+//   //   justifyContent: "flex-start"
+//   // },
 
-export default Albumlist;
+//   cardContainerStyle: {
+//     elevation: 5,
+//     marginLeft: 20,
+//     marginRight: 20,
+//     marginTop: 30,
+//     borderColor: "#D9C1CA",
+//     borderBottomWidth: 3
+//   },
+//   cardSectionStyle: {
+//     padding: 10,
+//     backgroundColor: "#fff",
+//   },
+//   imageStyle: {
+//     borderRadius: 10,
+//     height: 300,
+//     width: null
+//   },
+//   headerContentStyle: {
+//     flexDirection: "column",
+//     justifyContent: "space-around",
+//     paddingLeft: 10
+//   },
+// });
+
+export default AlbumList;
