@@ -3,7 +3,9 @@ import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 
 const Albumlist = () => {
   return (
-    <ScrollView>
+    <ScrollView style={{
+      width: "100%",
+    }}>
       <View style={styles.cardContainerStyle}>
         <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
           <Image
