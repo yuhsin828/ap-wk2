@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
-import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 import AlbumDetail from "./AlbumDetail";
 import albumData from "../json/albums";
 
@@ -14,14 +13,18 @@ const AlbumList = () => {
             uri: "https://i.kfs.io/artist/global/234878,0v11/fit/300x300.jpg"
           }}
         />
-        <Text>IU</Text>
+        <View>
+          <Text style={styles.iuName}>IU 이지은</Text>
+          <Text style={styles.introText}>Korea</Text>
+        </View>
       </View>
-
-      <AlbumDetail album={albumData[0]} />
-      <AlbumDetail album={albumData[1]} />
-      <AlbumDetail album={albumData[2]} />
-      <AlbumDetail album={albumData[3]} />
-      <AlbumDetail album={albumData[4]} />
+      <View>
+        <AlbumDetail album={albumData[0]} />
+        <AlbumDetail album={albumData[1]} />
+        <AlbumDetail album={albumData[2]} />
+        <AlbumDetail album={albumData[3]} />
+        <AlbumDetail album={albumData[4]} />
+      </View>
 
       {/* <View style={styles.cardContainerStyle}>
         <View style={styles.cardSectionStyle}>
@@ -112,45 +115,29 @@ const AlbumList = () => {
   );
 };
 
-// const styles = StyleSheet.create({
-//   iuIntro: {
-//     flexDirection: "row",
-//     padding: 30,
-//     backgroundColor: "#D9C1CA"
-//   },
-//   thumbnailStyle: {
-//     height: 120,
-//     width: 120,
-//     borderRadius: 60
-//   },
-
-//   // thumbnailContainerStyle: {
-//   //   flexDirection: "row",
-//   //   justifyContent: "flex-start"
-//   // },
-
-//   cardContainerStyle: {
-//     elevation: 5,
-//     marginLeft: 20,
-//     marginRight: 20,
-//     marginTop: 30,
-//     borderColor: "#D9C1CA",
-//     borderBottomWidth: 3
-//   },
-//   cardSectionStyle: {
-//     padding: 10,
-//     backgroundColor: "#fff",
-//   },
-//   imageStyle: {
-//     borderRadius: 10,
-//     height: 300,
-//     width: null
-//   },
-//   headerContentStyle: {
-//     flexDirection: "column",
-//     justifyContent: "space-around",
-//     paddingLeft: 10
-//   },
-// });
+const styles = StyleSheet.create({
+  iuIntro: {
+    flexDirection: "row",
+    padding: 30,
+    backgroundColor: "#D9C1CA",
+    alignItems: "center"
+  },
+  thumbnailStyle: {
+    height: 120,
+    width: 120,
+    borderRadius: 60
+  },
+  iuName: {
+    fontSize: 28,
+    color: "#59252E",
+    paddingLeft: 25,
+    marginBottom: 5
+  },
+  introText: {
+    fontSize: 20,
+    color: "#59252E",
+    paddingLeft: 25
+  }
+});
 
 export default AlbumList;

@@ -1,22 +1,21 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { borderLeftColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
 const Header = () => {
   return (
     <View style={styles.headerStyle}>
-      <Text style={styles.textStyle}>IU's Albums</Text>
+      <Text style={styles.textStyle}>IU  |  Albums</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   headerStyle: {
-    backgroundColor: "#D9C1CA",
+    backgroundColor: "#906B7A",
     justifyContent: "center",
     alignItems: "center",
     height: 60,
-    shadowColor: "#8C84BF",
+    shadowColor: "#D9C1CA",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     // Android Only
